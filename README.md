@@ -9,7 +9,7 @@ Terraform module which creates some resources that can be used as Terraform remo
 
 ```hcl
 module "remote_state" {
-  source  = "MauroSoli/remotestate/aws"
+  source  = "CodewaySA/remotestate/aws"
   version = "1.0.0"
 
   dynamodb_table = "terraform-state-locks"
