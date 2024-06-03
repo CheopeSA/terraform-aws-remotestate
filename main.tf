@@ -2,6 +2,8 @@
 resource "aws_s3_bucket" "this" {
   bucket        = var.remote_state_bucket
   force_destroy = false
+
+  tags = var.tags
 }
 
 # Block any form of public access to this bucket
@@ -51,4 +53,6 @@ resource "aws_dynamodb_table" "this" {
       table_class
     ]
   }
+
+  tags = var.tags
 }
